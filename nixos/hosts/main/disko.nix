@@ -2,7 +2,7 @@
   flake.diskoConfigurations.hostMain = {
     disko.devices = {
       disk.main = {
-        device = "/dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S736NU0W100374K";
+        device = "/dev/disk/by-id/nvme-INTEL_SSDPEKNU010TZ_PHKA121201T41P0B"; # CHANGEME
         type = "disk";
         content = {
           type = "gpt";

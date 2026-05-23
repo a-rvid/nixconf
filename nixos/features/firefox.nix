@@ -9,9 +9,5 @@
     persistance.cache.directories = [
       ".cache/mozilla"
     ];
-
-    preferences.keymap = {
-      "SUPER + d"."f".package = pkgs.firefox;
-    };
   };
 }

@@ -13,7 +13,7 @@
       };
 
       user = lib.mkOption {
-        default = "username";
+        default = "user";
         description = ''
           Main user
         '';

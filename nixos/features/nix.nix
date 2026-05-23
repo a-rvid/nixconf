@@ -24,8 +24,6 @@
       nil
       nixd
       statix
-      alejandra
-      manix
       nix-inspect
     ];
   };

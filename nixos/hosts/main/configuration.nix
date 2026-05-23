@@ -19,11 +19,9 @@
 
       self.nixosModules.discord
       self.nixosModules.gimp
-      self.nixosModules.telegram
-      self.nixosModules.youtube-music
+      self.nixosModules.flatpak
+      self.nixosModules.firefox
 
-      self.nixosModules.gaming
-      self.nixosModules.vr
       self.nixosModules.powersave
 
       # disko
@@ -57,13 +55,13 @@
     };
 
     virtualisation.libvirtd.enable = true;
-    virtualisation.podman = {
-      enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings = {
-        dns_enabled = true;
-      };
-    };
+    # virtualisation.podman = {
+    #   enable = true;
+    #   dockerCompat = true;
+    #   defaultNetwork.settings = {
+    #     dns_enabled = true;
+    #   };
+    # };
 
     hardware.cpu.amd.updateMicrocode = true;
 
@@ -78,12 +76,7 @@
     programs.alvr.openFirewall = true;
 
     environment.systemPackages = with pkgs; [
-      winetricks
       glib
-
-      bs-manager
-
-      zerotierone
 
       android-tools
     ];
@@ -112,29 +105,28 @@
       ".config/obs-studio"
     ];
 
-    services.create_ap = {
-      enable = true;
-      settings = {
-        INTERNET_IFACE = "enp14s0";
-        WIFI_IFACE = "wlp15s0";
-        SSID = "TROJANVIRUS67";
-        PASSPHRASE = "yuriiyuriiyurii";
+    # services.create_ap = {
+    #   enable = true;
+    #   settings = {
+    #     INTERNET_IFACE = "enp14s0";
+    #     WIFI_IFACE = "wlp15s0";
+    #     SSID = "TROJANVIRUS67";
+    #     PASSPHRASE = "yuriiyuriiyurii";
 
-        FREQ_BAND = "5"; # 5GHz
-        COUNTRY = "UA";
-        CHANNEL = "36"; # Channel 36
-        IEEE80211N = "1"; # WiFi 4
-        IEEE80211AC = "1"; # WiFi 5
-        IEEE80211AX = "1"; # WiFi 6 (HE)
-        HT_CAPAB = "[HT40+]"; # 40MHz
-      };
-    };
+    #     FREQ_BAND = "5"; # 5GHz
+    #     COUNTRY = "UA";
+    #     CHANNEL = "36"; # Channel 36
+    #     IEEE80211N = "1"; # WiFi 4
+    #     IEEE80211AC = "1"; # WiFi 5
+    #     IEEE80211AX = "1"; # WiFi 6 (HE)
+    #     HT_CAPAB = "[HT40+]"; # 40MHz
+    #   };
+    # };
 
-    # no conflicts
-    networking.networkmanager.unmanaged = ["wlp15s0"];
+    # # no conflicts
+    # networking.networkmanager.unmanaged = ["wlp15s0"];
     # speed
-    networking.firewall.allowedUDPPorts = [53 67];
 
-    system.stateVersion = "23.11";
+    system.stateVersion = "25.11";
   };
 }

@@ -43,13 +43,7 @@
               "/etc/NetworkManager/system-connections"
               "/tmp"
 
-              "/var/lib/zerotier-one"
-              # {
-              #   directory = "/var/lib/colord";
-              #   user = "colord";
-              #   group = "colord";
-              #   mode = "u=rwx,g=rx,o=";
-              # }
+              "/var/lib/flatpak"
             ]
             ++ cfg.directories;
           files =
