@@ -20,7 +20,6 @@
       self.nixosModules.discord
       self.nixosModules.gimp
       self.nixosModules.flatpak
-      self.nixosModules.firefox
 
       self.nixosModules.powersave
 
