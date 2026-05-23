@@ -19,13 +19,13 @@
       };
     };
 
-    # My primary flake terminal
-    packages.terminal =
-      (inputs.wrappers.wrapperModules.kitty.apply {
-        inherit pkgs;
-        imports = [self.wrappersModules.kitty];
-        shell = lib.getExe self'.packages.environment;
-      }).wrapper;
+    # # My primary flake terminal
+    packages.terminal = pkgs.ghostty;
+    #   (inputs.wrappers.wrapperModules.kitty.apply {
+    #     inherit pkgs;
+    #     imports = [self.wrappersModules.kitty];
+    #     shell = lib.getExe self'.packages.environment;
+    #   }).wrapper;
 
     # My primary flake shell with all of it's packages
     packages.environment = inputs.wrappers.lib.wrapPackage {

@@ -160,7 +160,7 @@
 
           focus-ring = {
             width = 2;
-            active-color = "#${self.themeNoHash.base09}";
+            # active-color = "#${self.themeNoHash.base09}";
           };
         };
 
