@@ -59,9 +59,9 @@
       bluetooth.enable = true;
       bluetooth.powerOnBoot = true;
 
-      opengl = {
+      graphics = {
         enable = true;
-        driSupport32Bit = true;
+        enable32Bit = true;
       };
     };
   };
